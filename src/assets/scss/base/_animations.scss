@@ -1,0 +1,51 @@
+@keyframes stretchNav {
+  0% {
+    padding: 1.6%;
+    opacity: .1;
+  }
+  40% {
+    opacity: .2;
+  }
+  80% {
+    padding: .9%;
+    opacity: .6;
+  }
+  90% {
+    padding: .85%;
+    opacity: 1;
+  }
+  100% {
+    padding: .8%;
+  }
+}
+
+@keyframes unstretchNav {
+  0% {
+    padding: 2%;
+    background-color: $color-white;
+  }
+
+  80% {
+    padding: .7%;
+    background-color: $color-white;
+    opacity: .6;
+  }
+  90% {
+    opacity: .2;
+  }
+
+  100% {
+  }
+}
+
+@keyframes changeColor {
+  0% { color: $color-highlight; }
+  100%  { color: $color-white; }
+}
+
+@keyframes turnYellow {
+  0% { color: $color-white; }
+  30% { color: $color-white }
+  70% { color: $color-highlight }
+  100% { color: $color-white }
+}

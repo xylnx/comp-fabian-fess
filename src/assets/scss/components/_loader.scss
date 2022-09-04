@@ -1,0 +1,23 @@
+/* Center loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('../img/loader_comp.gif');
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20vw;
+  height: 20vw;
+
+  @include respond(small) {
+    width: 50vw;
+    height: 50vw;
+  }
+
+  @include respond(x-small) {
+    width: 70vw;
+    height: 70vw;
+  }
+}

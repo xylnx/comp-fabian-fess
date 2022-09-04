@@ -1,0 +1,77 @@
+@mixin linkHover {
+
+  // Set Link (a) element's 'position: relative'!!
+  // Add this mixin to the <a> selector
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $color-highlight;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all .4s ease;
+  }
+
+  &:hover::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+}
+
+@mixin linkHoverLeft($another-color) {
+  &::before {
+    content: '';
+    position: absolute;
+    margin-left: 0px;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    visibility: hidden;
+    transition: all .4s ease;
+
+    // Pass an color to underline link
+    @if $another-color {
+      background-color: $color-white;
+      // Or fall back on default
+    } @else {
+      background-color: $color-highlight;
+    }
+  }
+
+  &:hover::before {
+    visibility: visible;
+    width: 100%;
+  }
+
+  // Add underline effect to active menu links
+  &.active::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+// Media queries
+// Breakpoints correspond to bootstrap breakpoints
+@mixin respond($breakpoint) {
+  @if $breakpoint == x-small {
+    @media (max-width: 36em) { @content }; // up to 576px
+  }
+
+  @if $breakpoint == small {
+    @media (max-width: 48em) { @content }; // up to 768px
+  }
+
+  @if $breakpoint == medium {
+    @media (max-width: 75em) { @content }; // up to 1200px, e.g. landscape tablets
+  }
+
+  @if $breakpoint == large {
+    @media (min-width: 112.5em) { @content }; // 1800px, huge desktops
+  }
+}

@@ -1,0 +1,40 @@
+.learn-more {
+color: $color-white;
+position: absolute;
+top: 90%;
+left: 50%;
+transform: translateX(-50%);
+
+  &--location {
+    position: relative;
+    display: inline-block;
+
+    & > .nav-link {
+      color: $color-highlight;
+
+      &:hover {
+        color: $color-highlight;
+      }
+    }
+  }
+
+  &__text {
+    display: block;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  &__icon {
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    animation: turnYellow 7s ease-out infinite;
+
+  }
+
+  & > *:hover {
+    color: $color-highlight;
+    font-size: 40px;
+    transition: color .3s ease;
+  }
+}

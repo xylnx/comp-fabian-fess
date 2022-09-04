@@ -1,0 +1,45 @@
+.parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: $walter-white;
+
+  &--opaque {
+     opacity: .8;
+
+  }
+}
+
+
+.parallax--ios {
+  background-attachment: inherit;
+}
+
+.parallax__about {
+  background-image: url('../img/about.jpg');
+}
+
+.parallax__work {
+  background-image: url('../img/about_new_1200_guetzli.jpg');
+}
+
+.parallax__contact {
+  background-image: url('../img/contact.jpg');
+}
+
+.parallax__testimonials {
+  background-image: url('../img/parallax_4.jpg');
+}
+
+.overlay {
+  background-color: $black-panther;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .1;
+  transition: all 0.2s ease-out;
+  z-index: 799;
+}

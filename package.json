@@ -1,0 +1,45 @@
+{
+  "name": "fabianfess",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/gulp/bin/gulp",
+    "build": "gulp build --prod",
+    "bundle": "gulp bundle --prod",
+    "deploy-dev-old": "echo 'Deploying from dev branch ...' && ssh-add ~/.ssh/id_rsa_fabianfess.de && cd dist && git init --separate-git-dir=../.deploy_git_repo/ && git add . && git commit -m 'deploy dev branch' &&git push deployRepo dev",
+    
+    "deploy-dev" : "bash ~/programming/shell_scripts/deploy/ff-deploy-dev.sh",
+    "deploy-prod" : "bash ~/programming/shell_scripts/deploy/ff-deploy-prod.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/register": "^7.6.2",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.1.1",
+    "gulp-nunjucks": "^5.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-zip": "^5.0.1",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^4.41.2",
+    "webpack-stream": "^5.2.1",
+    "yargs": "^14.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1",
+    "@fortawesome/fontawesome-free": "^5.7.0"
+  }
+}

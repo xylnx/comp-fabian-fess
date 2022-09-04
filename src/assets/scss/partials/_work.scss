@@ -1,0 +1,154 @@
+.card-container-parent {
+    overflow: hidden;
+  }
+
+  .card-container {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .work-card {
+    display: inline-block;
+    width: 40%;
+    background-color: #eee;
+    vertical-align: top;
+
+    @include respond(small) {
+      width: 80%;
+    }
+  }
+
+.content-box {
+  margin: 4% 1% 4%;
+  background-color: $walter-white;
+  transition: all .35s ease-in;
+  border-radius: 3px;
+  box-shadow: 0 5px 20px rgba($black-panther, .15);
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &:hover{
+    box-shadow: 0 10px 20px rgba($black-panther, .15);
+    transform: scale(1.01);
+  }
+
+   &:active {
+    box-shadow: 0 5px 10px rgba($black-panther, .15);
+    transform: scale(.95);
+  }
+}
+
+.content__vid {
+  padding: 0;
+}
+
+.content__text {
+  padding: 5%;
+  color: $black-panther;
+  white-space: normal;
+  text-overflow: ellipsis;
+
+  // You could also set a total height on the content-box
+  height: 230px; //200px
+
+  @include respond(medium) {
+    height: 230px //230px;
+  }
+
+  @include respond(small) {
+    height: 220px //250px;
+  }
+
+  @include respond(x-small) {
+    height: 280px //300px;
+  }
+}
+
+.category-heading {
+  font-size: .8rem;
+  color: $color-highlight;
+
+  @include respond(small) {
+    font-size: .6rem;
+  }
+}
+
+.iframe-container {
+  overflow: hidden;
+  padding-top: 56.25%;
+  position: relative;
+  transition: all .25s ease;
+  border-radius: 3px;
+}
+
+.iframe-container iframe,
+.iframe-container img {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   transition: all .8s;
+}
+
+.vid-description {
+  padding-top: 1px;
+}
+
+.scroll-button {
+  position: absolute;
+  color: #545A57;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 42;
+  background-color: #EDEDED;
+  opacity: .99;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 42px;
+  box-shadow: 0 5px 20px rgba($black-panther, .15);
+
+  &:hover {
+    opacity: 1;
+    color: #000;
+
+    box-shadow: 0 10px 20px rgba($black-panther, .15);
+    
+  }
+
+  &--left {
+    left: 0rem;
+  }
+
+  &--right {
+    right: 0rem;
+  }
+
+  @include respond(small) {
+    display: none;
+  }
+}
+
+.chevron {
+  &__work {
+    height: 100%; 
+    width:100%; 
+    position: relative; 
+    height: 100%;
+    padding: .8rem;
+  }
+  &__work path {
+    font-weight: bold;
+  }
+  
+  &--left {
+    color: red;
+  }
+}

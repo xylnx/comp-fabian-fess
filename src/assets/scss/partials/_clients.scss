@@ -1,0 +1,26 @@
+.clients-heading-sub {
+  text-transform: capitalize;
+}
+
+.clients-row {
+  padding: 2% 0 2%;
+}
+
+.clients-logo {
+  width: 90%;
+  margin: 4% 0;
+  border-radius: 3px;
+  box-shadow: 0 5px 20px rgba($black-panther, .15);
+  background-color: blue;
+  transition: all .35s ease-in;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba($black-panther, .15);
+    transform: scale(1.05);
+  }
+
+   &:active {
+    box-shadow: 0 5px 10px rgba($black-panther, .15);
+    transform: scale(.95);
+  }
+}

@@ -1,0 +1,35 @@
+.footer {
+  border-top: 1px solid $walter-white;
+  height: 50vh;
+  background-color: rgba($color-text-default, .9);
+  color: $walter-white;
+  position: relative;
+}
+
+.footer-content-box {
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  .footer-img {
+    margin: 0 25%;
+    width: 50%;
+  }
+
+  .footer-text {
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+
+    & > .footer-link {
+      color: $color-white;
+      position: relative;
+      @include linkHoverLeft(true);
+    }
+    & > .footer-link:hover {
+      text-decoration: none;
+    }
+  }
+}

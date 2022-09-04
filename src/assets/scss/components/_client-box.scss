@@ -1,0 +1,43 @@
+.client-box {
+  margin: 4% 0 4%;
+  background-color: $walter-white;
+  transition: all .25s ease;
+  border-radius: 1px;
+  box-shadow: 0 5px 20px rgba($black-panther, .15);
+  overflow: hidden;
+  height: 20vh;
+  width: 20vh;
+
+  &:hover {
+    box-shadow: 0 20px 40px rgba($black-panther, .25);
+    transform: scale(1.005);
+  }
+   &:active {
+    box-shadow: 0 5px 10px rgba($black-panther, .15);
+    transform: scale(.95);
+  }
+}
+
+.logo-box {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 5%;
+
+
+  &__logo {
+    width: 80%;
+    heigth: 80%;
+    border-radius: 3px;
+  }
+
+}
+
+.text-box {
+  display: inline-block;
+  color: $dark-gray;
+  text-decoration: none;
+  font-size: .8rem
+}

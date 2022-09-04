@@ -1,0 +1,136 @@
+.navbar {
+
+  .navbar-toggler-icon {
+    color: $color-highlight;
+  }
+
+  .navbar-brand {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    position:relative;
+    color: $color-text-default;
+
+    &:hover {
+      color: $color-text-default;
+    }
+  }
+
+  // margins for mobile view
+  @media only screen and (max-width: 768px) {
+    .nav-item {
+      margin-right: .6rem;
+    }
+  }
+
+  // margins desktop view
+  @media only screen and (min-width: 768px) {
+    .nav-item:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  .nav-link {
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    color: $color-text-default;
+
+    @media only screen and (min-width: 768px) {
+      @include linkHoverLeft(false);
+    }
+
+    &:hover {
+      color: $color-text-default;
+    }
+  }
+}
+
+.navbar-colored {
+  background-color: #fff;
+  padding: .8% 0;
+  animation: stretchNav .6s ease;
+  box-shadow: 0 10px 20px rgba($black-panther, .15);
+
+  .navbar-toggler span {
+    background-color: $color-highlight;
+    height: 3px;
+    width: 25px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    left: 0;
+    display: block;
+  }
+
+  .navbar-brand {
+    color: $color-text-default;
+
+    &:hover {
+      color: $color-text-default;
+    }
+  }
+
+  .nav-link {
+    color: $color-text-default;
+
+    @media only screen and (min-width: 768px) {
+      @include linkHoverLeft(false);
+    }
+
+    &:hover {
+      color: $color-text-default;
+    }
+  }
+}
+
+.navbar-trans {
+  .nav-link {
+    color: $color-text-default;
+
+    &:hover {
+      color: $color-text-default;
+    }
+  }
+
+  .navbar-brand {
+    color: $color-text-default;
+  }
+
+  animation: unstretchNav .4s ease-in;
+}
+
+.navbar-toggler {
+  position: relative;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: 0;
+}
+
+// Animate nav toggler in mobile view
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+  transition: transform .25s ease-in-out;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+  height: 12px;
+  visibility: hidden;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  transform: rotate(-135deg);
+}

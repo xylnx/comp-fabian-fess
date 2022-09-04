@@ -1,0 +1,30 @@
+.section {
+  padding: 5rem 0 5rem;
+  background-color: $walter-white;
+}
+
+#about img {
+    box-shadow: 0 10px 20px rgba($black-panther, .15);
+}
+#contact {
+  position: relative;
+
+  .contact-content {
+    padding: 2rem;
+    background-color: $walter-white;
+    color: $color-text-default;
+    border-radius: 3px;
+    box-shadow: 0 10px 20px rgba($black-panther, 0.25);
+    z-index: 800;
+  }
+
+}
+
+.email-link {
+  color: black;
+  text-decoration: underline;
+}
+
+.email-link:hover {
+  color: $dark-gray;
+}

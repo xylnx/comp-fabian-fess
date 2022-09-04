@@ -1,0 +1,59 @@
+// With thanks to HugoGiraudel who created a very helpful sass boilerplate
+// https://github.com/HugoGiraudel/sass-boilerplate
+
+@charset 'UTF-8';
+// Config, mixins, functions
+@import
+  'abstracts/variables',
+  'abstracts/mixins';
+
+// Foundational styles
+@import
+  'base/animations',
+  'base/base',
+  'base/typography',
+  'base/utilities';
+
+// Reusable standalone components
+@import
+  'components/paralax',
+  'components/client-box',
+  'components/loader',
+  'components/learn-more',
+  'components/scroll-up-btn';
+
+// Page specific styles
+@import
+  'pages/home';
+
+// Partials
+@import
+  'partials/header',
+  'partials/nav',
+  'partials/work',
+  'partials/footer',
+  'partials/clients',
+  'partials/testimonials';
+
+// Styles from external developers
+@import
+  'vendors/cookieconsent.min';
+
+// BOOTSTRAP
+@import "node_modules/bootstrap/scss/bootstrap";
+// Required
+// @import '../../../node_modules/bootstrap/scss/functions';
+// @import '../../../node_modules/bootstrap/scss/variables';
+// @import '../../../node_modules/bootstrap/scss/mixins';
+
+// Optional
+// @import '../../../node_modules/bootstrap/scss/reboot';
+// @import '../../../node_modules/bootstrap/scss/type';
+// @import '../../../node_modules/bootstrap/scss/images';
+// @import '../../../node_modules/bootstrap/scss/code';
+// @import '../../../node_modules/bootstrap/scss/grid';
+
+// @import
+//   '../../../node_modules/bootstrap/scss/forms',
+//   '../../../node_modules/bootstrap/scss/navbar',
+//   '../../../node_modules/bootstrap/scss/nav';
